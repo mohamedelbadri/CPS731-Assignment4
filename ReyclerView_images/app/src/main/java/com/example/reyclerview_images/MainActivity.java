@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> foodNames = new ArrayList<>();
     private ArrayList<String> foodDesc = new ArrayList<>();
     private ArrayList<String> foodIngredients = new ArrayList<>();
+    private ArrayList<String> mImageUrls = new ArrayList();
 
 //    private String[] foodNames = new String[]{"Pizza", "Burger", "Shawerma", "Egg n cheese", "Hot dog sandwich", "Turkey breasts"};
 //    private String[] foodDesc = new String[]{" dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients",
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getData();
         RecyclerView Rv=findViewById(R.id.recyclerview);
-        StaggeredRecyclerViewAdapter staggeredRecyclerViewAdapter= new StaggeredRecyclerViewAdapter(this,foodNames,foodDesc,foodIngredients);
+        StaggeredRecyclerViewAdapter staggeredRecyclerViewAdapter= new StaggeredRecyclerViewAdapter(this,foodNames,foodDesc,foodIngredients,mImageUrls);
         StaggeredGridLayoutManager staggeredGridLayoutManager= new StaggeredGridLayoutManager(1,LinearLayoutManager.VERTICAL);
         Rv.setLayoutManager(staggeredGridLayoutManager);
         Rv.setAdapter(staggeredRecyclerViewAdapter);
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private void getData(){
 //        Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
-//        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/220px-Eq_it-na_pizza-margherita_sep2005_sml.jpg");
         foodNames.add("Pizza");
         foodDesc.add("dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients");
         foodIngredients.add("INGREDIENTS\n" +
@@ -67,18 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 "Fontina cheese, grated\n" +
                 "Parmesan cheese, grated\n" +
                 "Feta cheese, crumbled\n" +
-                "Mushrooms, very thinly sliced if raw, otherwise first sautéed\n" +
-                "Bell peppers, stems and seeds removed, very thinly sliced\n" +
-                "Italian pepperoncini, thinly sliced\n" +
-                "Italian sausage, cooked ahead and crumbled\n" +
-                "Chopped fresh basil\n" +
-                "Baby arugula, tossed in a little olive oil, added as pizza comes out of the oven\n" +
-                "Pesto\n" +
-                "Pepperoni, thinly sliced\n" +
-                "Onions, thinly sliced raw or caramelized\n" +
                 "Ham, thinly sliced");
 
-        //        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+        mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Cheeseburger_with_fries.jpg/300px-Cheeseburger_with_fries.jpg");
         foodNames.add("Burger");
         foodDesc.add("A hamburger (also burger for short) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.");
         foodIngredients.add("INGREDIENTS\n" +
@@ -95,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 "1/3 cup chopped cilantro, for garnish\n" +
                 "2 poblano chile peppers (optional)");
 
-        //        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+                mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Shawarma.jpg/220px-Shawarma.jpg");
         foodNames.add("Shawerma");
         foodDesc.add( "(in Middle Eastern cuisine) roasted meat, as lamb or beef, cooked on a spit. a dish consisting of this meat, served wrapped in pita bread with tahini or hummus.");
         foodIngredients.add("Ingredients\n" +
@@ -122,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                 "Sliced lettuce (cos or iceberg)Sliced lettuce (cos or iceberg)\n" +
                 "Tomato slicesTomato slices");
 
-        //        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+                mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/McD-Egg-McMuffin.jpg/220px-McD-Egg-McMuffin.jpg");
         foodNames.add("Egg n cheese");
         foodDesc.add("Make the best scrambled eggs you've ever had with our quick & easy but simple to follow recipe - so good you'll never look elsewhere again!");
         foodIngredients.add("Ingredients of Egg And Cheese Grilled Sandwich\n" +
@@ -135,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 "1/2 teaspoon black pepper\n" +
                 "2 tablespoon butter");
 
-        //        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+                mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Hotdog_-_Evan_Swigart.jpg/220px-Hotdog_-_Evan_Swigart.jpg");
         foodNames.add("Hot dog sandwich");
         foodDesc.add("a grilled or steamed food where a sausage is served in the slit of a partially sliced bun. It can also refer to the sausage itself.");
         foodIngredients.add("INGREDIENTS\n" +
@@ -148,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 "American Garden U.S. ketchup\n" +
                 "American Garden U.S. mustard");
 
-        //        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
+                mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Thanksgiving_Turkey.jpg/200px-Thanksgiving_Turkey.jpg");
         foodNames.add("Turkey Breasts");
         foodDesc.add( "The turkey breast is all white meat, very low in fat, and high in protein. It is available fresh, frozen, fully cooked, skinned, skinless, bone-in, boneless, whole, halved, and filleted.");
         foodIngredients.add("Ingredients\n" +

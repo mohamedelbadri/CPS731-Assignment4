@@ -26,15 +26,17 @@ public class StaggeredRecyclerViewAdapter extends RecyclerView.Adapter<Staggered
     private ArrayList<String> foodNames1 = new ArrayList<>();
     private ArrayList<String> foodDesc1 = new ArrayList<>();
     private ArrayList<String> foodIngredients1 = new ArrayList<>();
+     private ArrayList<String> mImageNames=new ArrayList();
     private Context mcontext;
     //    ImageView pic;
     TextView name;
     TextView desc;
 
-    public StaggeredRecyclerViewAdapter(Context mcontext,ArrayList<String> foodArray, ArrayList<String> foodDescNames, ArrayList<String> foodingredients) {
+    public StaggeredRecyclerViewAdapter(Context mcontext,ArrayList<String> foodArray, ArrayList<String> foodDescNames, ArrayList<String> foodingredients , ArrayList<String> mImageNames1) {
         this.foodNames1 = foodArray;
         this.foodDesc1 = foodDescNames;
         this.foodIngredients1 = foodingredients;
+        this.mImageNames = mImageNames1;
         this.mcontext = mcontext;
     }
 
@@ -64,8 +66,8 @@ public class StaggeredRecyclerViewAdapter extends RecyclerView.Adapter<Staggered
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mcontext, "hello", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(mcontext,foodRecipe.class);
+                intent.putExtra("image_key",mImageNames.get(position));
                 intent.putExtra("message_key", foodIngredients1.get(position));
                 mcontext.startActivity(intent);
             }
