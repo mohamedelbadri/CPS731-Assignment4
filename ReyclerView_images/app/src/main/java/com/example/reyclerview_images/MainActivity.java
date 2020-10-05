@@ -19,16 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> foodIngredients = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList();
 
-//    private String[] foodNames = new String[]{"Pizza", "Burger", "Shawerma", "Egg n cheese", "Hot dog sandwich", "Turkey breasts"};
-//    private String[] foodDesc = new String[]{" dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients",
-//            "A hamburger (also burger for short) is a sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.",
-//            "(in Middle Eastern cuisine) roasted meat, as lamb or beef, cooked on a spit. a dish consisting of this meat, served wrapped in pita bread with tahini or hummus.",
-//            "Make the best scrambled eggs you've ever had with our quick & easy but simple to follow recipe - so good you'll never look elsewhere again!",
-//            "a grilled or steamed food where a sausage is served in the slit of a partially sliced bun. It can also refer to the sausage itself.",
-//            "The turkey breast is all white meat, very low in fat, and high in protein. It is available fresh, frozen, fully cooked, skinned, skinless, bone-in, boneless, whole, halved, and filleted."};
-
-    //private ArrayList<String> mImagesURls = new ArrayList();
-//    Integer[] Animals = {R.drawable.eagle, R.drawable.elephant, R.drawable.gorilla, R.drawable.panda, R.drawable.panther, R.drawable.polar};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void getData(){
-//        Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
         mImageUrls.add("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg/220px-Eq_it-na_pizza-margherita_sep2005_sml.jpg");
         foodNames.add("Pizza");
